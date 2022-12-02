@@ -19,6 +19,17 @@
 body{
     background-image: url(bg.jpg);
 }
+.rating{
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    flex-direction: column;
+    align-items: center;
+}
+.colorblock{
+    width: 50%;
+    height: 5vh;
+}
 .colorblock:hover .colorcode{
     display: flex !important;
     position: relative;

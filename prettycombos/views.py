@@ -24,7 +24,6 @@ def vote(request):
 			else:
 				c1 = colorcombos(title=cc1)
 				c1.save()
-		print("huh")
 		if request.GET.get('colorcombo2',None) != None:
 			cc2 = request.GET.get('colorcombo2',None)
 			if c1 != None and c2!= None:
@@ -44,7 +43,6 @@ def vote(request):
 		return HttpResponse("Request method is not a GET")
 def results(request):
 	leads = colorcombos.objects.order_by('-rating')
-	print(leads)
 	leadDict= {}
 	for i in leads:
 		leadDict[i.title] = float(i.rating)
